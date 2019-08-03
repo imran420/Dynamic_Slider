@@ -70,7 +70,7 @@
 					}
 				
 					//Get image data from database
-					$result = $db->query("SELECT id, created FROM images order by created DESC  limit 3");
+					$result = $db->query("SELECT id, created FROM images order by created DESC  limit 4");
 				
 					While($imgData = $result->fetch_assoc()){        
 						echo "<div> <img data-u='image' src='display.php?id=". $imgData['id'] . "' ></div>"; 
@@ -152,7 +152,7 @@
             var options = {
                 $AutoPlay: 1,                                       //[Optional] Auto play or not, to enable slideshow, this option must be set to greater than 0. Default value is 0. 0: no auto play, 1: continuously, 2: stop at last slide, 4: stop on click, 8: stop on user navigation (by arrow/bullet/thumbnail/drag/arrow key navigation)
                 $AutoPlaySteps: 1,                                  //[Optional] Steps to go for each navigation request (this options applys only when slideshow disabled), the default value is 1
-                $Idle: 5000,                                        //[Optional] Interval (in milliseconds) to go for next slide since the previous stopped if the slider is auto playing, default value is 3000
+                $Idle: 3000,                                        //[Optional] Interval (in milliseconds) to go for next slide since the previous stopped if the slider is auto playing, default value is 3000
                 $PauseOnHover: 1,                                   //[Optional] Whether to pause when mouse over if a slider is auto playing, 0 no pause, 1 pause for desktop, 2 pause for touch device, 3 pause for desktop and touch device, 4 freeze for desktop, 8 freeze for touch device, 12 freeze for desktop and touch device, default value is 1
                 $ArrowKeyNavigation: 1,   			            	//[Optional] Steps to go for each navigation request by pressing arrow key, default value is 1.
                 $SlideEasing: $Jease$.$OutQuint,                    //[Optional] Specifies easing for right to left animation, default value is $Jease$.$OutQuad
